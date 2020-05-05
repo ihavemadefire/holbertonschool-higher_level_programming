@@ -16,7 +16,7 @@ int is_palindrome(listint_t **head)
 	tmp1 = *head;
 	if (*head == NULL)
 		return (1);
-	if (tmp1->next == NULL)
+	if ((*head)->next == NULL)
 		return (1);
 	tmp2 = rev_list(tmp1);
 	while (tmp1 != NULL)
