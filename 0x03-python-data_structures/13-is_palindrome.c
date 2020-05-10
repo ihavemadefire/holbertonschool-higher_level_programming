@@ -18,7 +18,7 @@ int is_palindrome(listint_t **head)
 		return (1);
 	if ((*head)->next == NULL)
 		return (1);
-	tmp2 = rev_list(tmp1);
+	tmp2 = copyll(tmp1);
 	while (tmp1 != NULL)
 	{
 		if (tmp1->n != tmp2->n)
@@ -29,22 +29,32 @@ int is_palindrome(listint_t **head)
 	return (1);
 }
 /**
- * rev_list - reverses a passed linked list
- * @ll: pointer to list to be reversed
- * Return: pointer to reversed list.
+ * copyll - copy linked list
+ * @ll: list to be scanned for palindrome
+ * Return: a new malloced list
  */
-listint_t *rev_list(listint_t *ll)
+listint_t *copyll(listint_t *ll)
 {
-	listint_t *tmp1 = ll;
-	listint_t *tmp2 = NULL;
-	listint_t *revlist = NULL;
+	listint_t *current;
+	listint_t *new_list;
+	listint_t *stash;
 
-	while (tmp1 != NULL)
+	current = ll;
+	new_list = malloc(sizeof(listint_t));
+	if(new_list == NULL)
+		return (NULL);
+	new_list->n = current->n;
+	new_list->next = NULL;
+	current = current->next;
+	while (current != NULL)
 	{
-		tmp2 = tmp1->next;
-		tmp1->next = revlist;
-		revlist = tmp1;
-		tmp1 = tmp2;
+		stash = new_list;
+		new_list = malloc(sizeof(listint_t));
+		if (new_list == NULL)
+			return (NULL);
+		new_list->n = current->n;
+		new_list->next = stash;
+		current = current->next;
 	}
-	return (revlist);
+	return (new_list);
 }
