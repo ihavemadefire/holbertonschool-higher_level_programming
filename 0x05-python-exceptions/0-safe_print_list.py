@@ -4,8 +4,7 @@ def safe_print_list(my_list=[], x=0):
         count = i + 1
         try:
             print("{}".format(my_list[i]), end='')
-
-        except:
+        except IndexError:
             count = i - 1
     print()
     return count
