@@ -46,11 +46,12 @@ class Square:
 
     def my_print(self):
         """A custom print function using the # character."""
+        if self.__size == 0:
+            print()
+            return
         for x in range(self.__position[1]):
             print()
         for row in range(self.__size):
             [print(" ", end='') for y in range(self.__position[0])]
             [print("#", end='') for column in range(self.__size)]
-            print()
-        if self.__size == 0:
             print()
