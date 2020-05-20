@@ -1,9 +1,9 @@
 #!/usr/bin/python
-"""Defines node and linked list head"""
+"""Defines node and linked list head."""
 
 
 class Node:
-    """Thie class defines the structure of a singly linked list node"""
+    """This class defines the structure of a singly linked list node."""
     def __init__(self, data, next_node=None):
         """Init a new instance of Square given a size.
         Args:
@@ -37,7 +37,7 @@ class Node:
 
 
 class SinglyLinkedList:
-    """Recreates a sll head double pointer"""
+    """Recreates a sll head double pointer."""
 
     def __init__(self):
         """Inits a new list"""
@@ -46,7 +46,7 @@ class SinglyLinkedList:
     def sorted_insert(self, value):
         """Inserts new node.
         Args:
-            value (Node): node to be inserted
+            value (Node): node to be inserted.
         """
         new = Node(value)
         if self.__head is None:
@@ -63,7 +63,7 @@ class SinglyLinkedList:
             c.next_node = new
 
     def __str__(self):
-        """Generates string representation for printing"""
+        """Generates string representation for printing."""
         ret = []
         temp = self.__head
         while temp is not None:
