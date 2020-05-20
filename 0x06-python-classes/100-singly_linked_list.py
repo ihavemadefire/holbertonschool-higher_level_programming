@@ -1,11 +1,21 @@
+#!/usr/bin/python
+"""Defines node and linked list head"""
+
+
 class Node:
     """Thie class defines the structure of a singly linked list node"""
     def __init__(self, data, next_node=None):
+        """Init a new instance of Square given a size.
+        Args:
+            data (int): Size of one side of the square.
+            next_node (Node): Link to next node.
+        """
         self.data = data
         self.next_node = next_node
 
     @property
     def data(self):
+        """Getter and setter for node data."""
         return self.__data
 
     @data.setter
@@ -16,6 +26,7 @@ class Node:
 
     @property
     def next_node(self):
+        """Getter and setter for next_node."""
         return self.__next_node
 
     @next_node.setter
@@ -24,18 +35,24 @@ class Node:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
 
+
 class SinglyLinkedList:
     """Recreates a sll head double pointer"""
 
     def __init__(self):
+        """Inits a new list"""
         self.__head = None
 
     def sorted_insert(self, value):
+        """Inserts new node.
+        Args:
+            value (Node): node to be inserted
+        """
         new = Node(value)
         if self.__head is None:
             new.next_node = None
             self.__head = new
-        elif self.__head.data >value:
+        elif self.__head.data > value:
             new.next_node = self.__head
             self.__head = new
         else:
@@ -46,6 +63,7 @@ class SinglyLinkedList:
             c.next_node = new
 
     def __str__(self):
+        """Generates string representation for printing"""
         ret = []
         temp = self.__head
         while temp is not None:
