@@ -3,9 +3,9 @@
 
 
 class Square:
-     """Represent the attributes of a square."""
+    """Represent the attributes of a square."""
     def __init__(self, size=0):
-         """Init a new instance of Square given a size.
+        """Init a new instance of Square given a size.
         Args:
             size (int): Size of one side of the square.
         """
@@ -29,9 +29,9 @@ class Square:
         self.__size = value
 
     def my_print(self):
-        """A custom print function."""
-        for row in range(self.__size):
-            [print("#", end='') for column in range(self.__size)]
+        """A custom print function using the # character."""
+        for row in range(0, self.__size):
+            [print("#", end='') for column in range(0, self.__size)]
             print()
         if self.__size == 0:
             print()
