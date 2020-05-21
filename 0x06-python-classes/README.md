@@ -1,1 +1,1 @@
-This is a placeholder README
+#0x06. Python - Classes and Objects
