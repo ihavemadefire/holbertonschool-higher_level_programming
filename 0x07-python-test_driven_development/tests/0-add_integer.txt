@@ -1,0 +1,63 @@
+    ##################################
+    ## The ``0-add_integer`` module ##
+    ##################################
+
+    How to use the module:
+    ----------------------
+    [*] First, import the module:
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+    [*] Some use case tests:
+    ------------------------
+
+    A base use case would be 1 + 2 = 3:
+
+    >>> add_integer (1, 2)
+    3
+
+    It works with negative numbers as well:
+
+    >>> add_integer(1, -10)
+    -9
+
+    It works with floats as well, but returns an int:
+
+    >>> add_integer(1.5, 6.789)
+    7
+
+    One of the arguments is predefined as 98,
+    so if only one number is passed the it will be added to 98
+    >>> add_integer(1)
+    99
+
+    [*]  Error cases
+    ----------------
+
+    If an arguement is passed that is not an int or float, add_integer
+    will tell you which is the errant input:
+
+    >>> add_integer('Holberton', 1)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    or
+
+    >>> add_integer(1, 'Holberton')
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+    If neither argument is an int or float, add_integer will return
+    the the first argument's place in the error message as that's
+    where the function stopped checking:
+
+    >>> add_integer('Hello', 'Holberton')
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    Finally, if a NoneType is passed it will return the traceback:
+    type error message for the first argument:
+
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
