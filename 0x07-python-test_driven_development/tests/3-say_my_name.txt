@@ -1,0 +1,44 @@
+    ##################################
+    ## The ``3-say_my_name`` module ##
+    ##################################
+
+    How to use the module:
+    ----------------------
+    [*] First, import the module:
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+    [*] Some use case tests:
+    ------------------------
+
+    A base use case would be "My name is Beyonce Knowles":
+
+    >>> say_my_name("Beyonce", "Knowles")
+    My name is Beyonce Knowles
+
+    If no name second name is provided only the first name will be printed
+    as the second name has been made optional with a default value of an
+    empty string "".
+
+    >>> say_my_name("Bae")
+    My name is Bae 
+
+
+    [*]  Error cases
+    ----------------
+
+    Passing a non-string argument will result in an error
+
+    >>> say_my_name(3, "Child")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+    >>> say_my_name(Kelly, "Rowland")
+    Traceback (most recent call last):
+    NameError: name 'Kelly' is not defined
+
+    or
+
+    >>> say_my_name("Michelle", Williams)
+    Traceback (most recent call last):
+    NameError: name 'Williams' is not defined
