@@ -3,7 +3,13 @@
 
 
 def say_my_name(first_name, last_name=""):
-    """Defines a funtion say_my_name """
+    """Defines a funtion say_my_name.
+
+    Args:
+        first_name: Name to be printed.
+        last_name: Last name to be printed.
+
+    """
     if not isinstance(first_name, str):
         raise TypeError('first_name must be a string')
     if not isinstance(last_name, str):

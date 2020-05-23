@@ -3,7 +3,12 @@
 
 
 def print_square(size):
-    """This function prints squares."""
+    """This function prints squares.
+
+    Args:
+        size: sixe of one side of the square.
+
+    """
     if not isinstance(size, int):
         raise TypeError("size must be an integer")
     elif size < 0:
