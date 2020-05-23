@@ -1,0 +1,32 @@
+    #######################################
+    ## The ``5-text_indentation`` module ##
+    #######################################
+
+    How to use the module:
+    ----------------------
+    [*] First, import the module:
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+    [*] Some use case tests:
+    ------------------------
+
+    A base use case would be:
+
+    >>> print_square("This. is? a sample")
+    This
+
+
+    is
+
+
+    a sample
+
+    [*]  Error cases
+    ----------------
+
+    Passing a non-string argument will result in an error
+
+    >>> print_square(37)
+    Traceback (most recent call last):
+    TypeError: text must be a string

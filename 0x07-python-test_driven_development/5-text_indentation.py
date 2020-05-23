@@ -3,7 +3,12 @@
 
 
 def text_indentation(text):
-    """This Function indents text"""
+    """This Function indents text.
+
+    Args:
+        text to be parsed.
+
+    """
     if not isinstance(text, str):
         raise TypeError('text must be a string')
     q = [".", "?", ":"]
