@@ -1,0 +1,34 @@
+    ###################################
+    ## The ``4-print_square`` module ##
+    ###################################
+
+    How to use the module:
+    ----------------------
+    [*] First, import the module:
+
+    >>> print_square = __import__('4-print_square').print_square
+
+    [*] Some use case tests:
+    ------------------------
+
+    A base use case would be:
+
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+
+    [*]  Error cases
+    ----------------
+
+    Passing a non-integer argument will result in an error
+
+    >>> print_square("Q")
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+    >>> print_square(-5)
+    Traceback (most recent call last):
+    ValueError: size must be >= 0
