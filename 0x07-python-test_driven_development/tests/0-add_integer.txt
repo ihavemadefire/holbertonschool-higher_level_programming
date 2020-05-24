@@ -66,6 +66,6 @@
     Traceback (most recent call last):
     OverflowError: cannot convert float infinity to integer
 
-    >>> add_integer(float(NaN))
+    >>> add_integer(float('NaN'))
     Traceback (most recent call last):
-    NameError: name 'NaN' is not defined
+    ValueError: cannot convert float NaN to integer
