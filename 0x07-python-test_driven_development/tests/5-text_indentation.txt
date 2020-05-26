@@ -13,20 +13,23 @@
 
     A base use case would be:
 
-    >>> print_square("This. is? a sample")
-    This
+    >>> text_indentation("Holberton. School? How are you: John")
+    Holberton.
+    <BLANKLINE>
+    School?
+    <BLANKLINE>
+    How are you:
+    <BLANKLINE>
+    John
 
-
-    is
-
-
-    a sample
 
     [*]  Error cases
     ----------------
 
     Passing a non-string argument will result in an error
 
-    >>> print_square(37)
+    >>> text_indentation(37)
     Traceback (most recent call last):
     TypeError: text must be a string
+
+    
