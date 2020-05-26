@@ -22,6 +22,13 @@
     <BLANKLINE>
     John
 
+    >>> text_indentation("Holberton.School")
+    Holberton.
+    <BLANKLINE>
+    School
+
+    >>> text_indentation("Holberton School")
+    Holberton School
 
     [*]  Error cases
     ----------------
@@ -32,4 +39,3 @@
     Traceback (most recent call last):
     TypeError: text must be a string
 
-    
