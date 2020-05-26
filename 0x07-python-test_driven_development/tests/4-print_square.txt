@@ -20,7 +20,7 @@
     ####
 
     >>> print_square(0)
-    
+    <BLANKLINE>
 
     [*]  Error cases
     ----------------
