@@ -32,3 +32,18 @@ Another case would be an empty list
 []
 >>> print(my_list)
 []
+
+
+finally we could try adding negative numbers
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(-3)
+>>> my_list.append(7)
+>>> my_list.append(5)
+>>> print(my_list)
+[1, 4, -3, 7, 5]
+>>> my_list.print_sorted()
+[-3, 1, 4, 5, 7]
+>>> print(my_list)
+[1, 4, -3, 7, 5]
