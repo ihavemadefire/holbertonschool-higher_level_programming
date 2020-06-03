@@ -11,6 +11,7 @@ def read_lines(filename="", nb_lines=0):
         for i in range(nb_lines):
             print(file.readline(), end='')
 
+
 def number_of_lines(filename=""):
     """This file returns a count of lines in a file"""
     count = 0
