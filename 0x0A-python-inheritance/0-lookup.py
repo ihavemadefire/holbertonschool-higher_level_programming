@@ -4,4 +4,4 @@
 
 def lookup(obj):
     """this funciton looks up the object attributes"""
-    return dir(object)
+    return dir(obj)
