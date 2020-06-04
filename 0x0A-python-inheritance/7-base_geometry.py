@@ -4,8 +4,6 @@
 
 class BaseGeometry():
     """This is the class BaseGeometry"""
-
-
     def area(self):
         """This is the area function"""
         raise Exception("area() is not implemented")
@@ -16,5 +14,3 @@ class BaseGeometry():
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
             raise ValueError("{:s} must be greater than 0".format(name))
-        else:
-            pass
