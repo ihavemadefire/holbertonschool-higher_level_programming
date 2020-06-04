@@ -23,6 +23,9 @@ class Student():
 
     def reload_from_json(self, json):
         """This is a docstring"""
-        self.first_name = json.get("first_name")
-        self.last_name = json.get("last_name")
-        self.age = json.get("age")
+        if json.get("first_name") is not None:
+            self.first_name = json.get("first_name")
+        if json.get("last_name") is not None:
+            self.last_name = json.get("last_name")
+        if json.get("age") is not None:
+            self.age = json.get("age")
