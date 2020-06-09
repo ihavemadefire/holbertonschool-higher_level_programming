@@ -29,14 +29,14 @@ class Base():
         """Saves json to file"""
         filename = "{}.json".format(cls.__name__)
         tosave = []
-        if list_objs is None:
-            with open(filename, 'w', encoding="utf-8") as file:
+        with open(filename, 'w', encoding="utf-8") as file:
+            if list_objs is None:
+                tosave = cls.to_json_string(cls.to_dictionary(tosave))
                 file.write(tosave)
-        else:
-            for i in list_objs:
-                tosave.append(cls.to_dictionary(i))
-            tosave = cls.to_json_string(tosave)
-            with open(filename, 'w', encoding="utf-8") as file:
+            else:
+                for i in list_objs:
+                    tosave.append(cls.to_dictionary(i))
+                tosave = cls.to_json_string(tosave)
                 file.write(tosave)
 
     @staticmethod
