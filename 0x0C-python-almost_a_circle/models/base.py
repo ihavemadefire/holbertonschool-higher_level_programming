@@ -31,7 +31,6 @@ class Base():
         tosave = []
         with open(filename, 'w', encoding="utf-8") as file:
             if list_objs is None:
-                tosave = cls.to_json_string(cls.to_dictionary(tosave))
                 file.write(tosave)
             else:
                 for i in list_objs:
