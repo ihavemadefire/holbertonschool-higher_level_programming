@@ -54,3 +54,12 @@ class Base():
             obj1 = cls(size=1)
         obj1.update(**dictionary)
         return obj1
+
+    @classmethod
+    def load_from_file(cls):
+        """Loads instances from file"""
+        filename = "{}.json".format(cls.__name__)
+        with open(filename, 'r', encoding="utf-8") as file:
+            for i in file:
+                var = cls.from_json_string(i)
+                cls.create(var)
