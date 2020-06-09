@@ -31,7 +31,7 @@ class Base():
         tosave = []
         with open(filename, 'w', encoding="utf-8") as file:
             if list_objs is None:
-                file.write(tosave)
+                file.write(cls.to_json_strint(tosave))
             else:
                 for i in list_objs:
                     tosave.append(cls.to_dictionary(i))
@@ -41,6 +41,8 @@ class Base():
     @staticmethod
     def from_json_string(json_string):
         """Converts json to dictionary"""
+        if json_string is None:
+            return []
         return json.loads(json_string)
 
     @classmethod
