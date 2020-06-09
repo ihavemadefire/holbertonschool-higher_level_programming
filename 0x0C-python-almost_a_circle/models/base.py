@@ -48,9 +48,9 @@ class Base():
     @classmethod
     def create(cls, **dictionary):
         """From dict to instance"""
-        if cls.__name__ == 'Rectangle':
-            obj1 = Rectangle(width=1, height=1)
+        if cls.__name__ == "Rectangle":
+            obj1 = cls(height=1, width=1)
         else:
-            obj1 = Square(size=1)
-        obj1.update(dictionary)
+            obj1 = cls(size=1)
+        obj1.update(**dictionary)
         return obj1
