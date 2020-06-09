@@ -16,15 +16,15 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """This is an update function"""
         if len(args) > 0:
-            if len(args) == 1:
+            if len(args) >= 1:
                 super().__init__(args[0])
-            if len(args) == 2:
+            if len(args) >= 2:
                 self.width = args[1]
-            if len(args) == 3:
+            if len(args) >= 3:
                 self.height = args[2]
-            if len(args) == 4:
+            if len(args) >= 4:
                 self.x = args[3]
-            if len(args) == 5:
+            if len(args) >= 5:
                 self.y = args[4]
         else:
             if kwargs.get('id'):
@@ -105,3 +105,12 @@ class Rectangle(Base):
         elif (value < 0):
             raise ValueError("y must be >= 0")
         self.__y = value
+
+    def to_dictionary(self):
+        """Creates a dictionary representation"""
+        return {
+            'x': self.x,
+            'y': self.y,
+            'id': self.id,
+            'width' : self.width,
+            'height': self.height}

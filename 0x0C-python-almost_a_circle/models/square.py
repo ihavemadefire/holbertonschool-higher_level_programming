@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This module stared into the abyss too long and now it listens to Morrissey"""
+"""This module stared into the abyss too long and now listens to Morrissey"""
 from models.rectangle import Rectangle
 from models.base import Base
 
@@ -30,13 +30,13 @@ class Square(Rectangle):
     def update(self, *args, **kwargs):
         """Update"""
         if len(args) > 0:
-            if len(args) == 1:
-                super(Base, self).__init__(args[0])
-            if len(args) == 2:
+            if len(args) >= 1:
+                self.id = args[0]
+            if len(args) >= 2:
                 self.size = args[1]
-            if len(args) == 3:
+            if len(args) >= 3:
                 self.x = args[2]
-            if len(args) == 4:
+            if len(args) >= 4:
                 self.y = args[3]
         else:
             if kwargs.get('id'):
@@ -51,4 +51,12 @@ class Square(Rectangle):
     def __str__(self):
         """This is the str rep function"""
         return ("[Square] ({}) {}/{} - {}".format
-                (self.id, self.x, self.y, self.height))
+                (self.id, self.x, self.y, self.size))
+
+    def to_dictionary(self):
+        return {
+            'id': self.id,
+            'size': self.size,
+            'x': self.x,
+            'y': self.y
+        }
