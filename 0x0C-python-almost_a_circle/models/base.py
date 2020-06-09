@@ -2,6 +2,7 @@
 """This module contains a class called Base"""
 import json
 
+
 class Base():
     """"This is the base class"""
 
