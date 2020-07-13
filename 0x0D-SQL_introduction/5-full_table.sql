@@ -1,2 +1,2 @@
 -- select entire table
-select * from first_table;
+DESC first_table;
