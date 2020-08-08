@@ -15,6 +15,6 @@ if __name__ == '__main__':
     states = cur.execute("SELECT * FROM cities ORDER BY id ASC")
     rows = cur.fetchall()
     for row in rows:
-        print (row)
+        print(row)
     cur.close()
     db.close()
