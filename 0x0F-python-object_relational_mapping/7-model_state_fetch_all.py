@@ -16,4 +16,4 @@ if __name__ == "__main__":
     result = session.query(State).all()
 
     for row in result:
-        print(row.name)
+        print("{}: {}".format(row.id,row.name))
