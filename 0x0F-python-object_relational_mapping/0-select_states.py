@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Select stuff"""
+
 import MySQLdb
 import sys
 
@@ -8,6 +9,8 @@ HOST = '127.0.0.1'
 USER = args_list[0]
 PASS = args_list[1]
 MY_DB = args_list[2]
+
+
 if __name__ == '__main__':
     db = MySQLdb.connect(host=HOST, user=USER, passwd=PASS, db=MY_DB)
     cur = db.cursor()
