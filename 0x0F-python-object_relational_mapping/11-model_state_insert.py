@@ -14,7 +14,7 @@ if __name__ == "__main__":
     from sqlalchemy.orm import sessionmaker
     Session = sessionmaker(bind=engine)
     session = Session()
-    LA  = State(name = "Louisiana")
+    LA = State(name="Louisiana")
     session.add(LA)
     session.commit()
-    print(LA)
+    print(LA.id)
