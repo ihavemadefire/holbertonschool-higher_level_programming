@@ -15,7 +15,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     result = session.query(State).filter(State.name == sys.argv[4])
-    if not result:
+    if result.count() == 0:
         print("Not found")
     else:
         for row in result:
