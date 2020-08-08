@@ -5,13 +5,6 @@
 import MySQLdb
 import sys
 
-args_list = sys.argv[1:]
-HOST = '127.0.0.1'
-USER = args_list[0]
-PASS = args_list[1]
-MY_DB = args_list[2]
-NAME = args_list[3]
-
 if __name__ == '__main__':
 
     args_list = sys.argv[1:]
