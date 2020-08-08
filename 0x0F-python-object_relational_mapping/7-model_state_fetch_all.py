@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""This module creates a select all function"""
 import sys
 from sqlalchemy.sql import select
 from model_state import Base, State
