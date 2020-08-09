@@ -12,7 +12,7 @@ if __name__ == '__main__':
     PASS = args_list[1]
     MY_DB = args_list[2]
     if len(args_list) > 4:
-        NAME = args_list[3] +" "+ args_list[4]
+        NAME = args_list[3] + " " + args_list[4]
     else:
         NAME = args_list[3]
     db = MySQLdb.connect(user=USER, passwd=PASS, db=MY_DB)
