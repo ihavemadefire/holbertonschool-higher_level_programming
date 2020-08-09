@@ -18,7 +18,7 @@ if __name__ == '__main__':
     ON states.id=cities.state_id WHERE states.name='{}' ORDER\
     BY cities.id".format(NAME))
     rows = cur.fetchall()
-    print(rows[0][0], end=" ")
+    print(rows[0][0], end="")
     for row in rows[1:]:
         print(", {}".format(row[0]), end="")
     print()
