@@ -13,7 +13,7 @@ if __name__ == '__main__':
 
     db = MySQLdb.connect(user=USER, passwd=PASS, db=MY_DB)
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name='{}' ORDER BY id".
+    cur.execute("SELECT * FROM states WHERE BINARY name='{}' ORDER BY id".
                 format(INPUT))
     rows = cur.fetchall()
     for row in rows:
