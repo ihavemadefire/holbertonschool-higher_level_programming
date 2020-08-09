@@ -28,3 +28,5 @@ if __name__ == '__main__':
         for row in rows[1:]:
             print(", {}".format(row[0]), end="")
         print()
+    else:
+        print()
