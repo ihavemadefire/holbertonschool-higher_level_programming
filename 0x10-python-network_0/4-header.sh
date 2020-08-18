@@ -1,0 +1,3 @@
+#!/bin/bash
+# This returns a specific header value
+curl -s -H "X-HolbertonSchool-User-Id: 98" "$1"
