@@ -4,9 +4,9 @@ import urllib.request
 import sys
 
 
-site = sys.argv[1]
 if __name__ == "__main__":
-    with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
+    site = sys.argv[1]
+    with urllib.request.urlopen(site) as response:
         html = (response.headers)
         val = dict(html)
         xwing = val.get("X-Request-Id")
