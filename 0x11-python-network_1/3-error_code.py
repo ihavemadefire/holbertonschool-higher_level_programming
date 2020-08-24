@@ -1,15 +1,15 @@
 #!/usr/bin/python3
-"""This displays X-Request-Id in a response header"""
+"""This displays either test or error code"""
 import urllib.request
+import urllib.error
 import sys
 
 
 if __name__ == "__main__":
     site = sys.argv[1]
-    email = sys.argv[2]
-    data = urllib.parse.urlencode({"email": email})
-    data = data.encode("ascii")
-    with urllib.request.urlopen(site, data) as response:
-        html = response.read()
-        html = html.decode("UTF-8")
-        print(html)
+    try:
+        with urllib.request.urlopen(site) as response:
+            response = response.read()
+            print(response.decode("UTF-8"))
+    except Exception as e:
+        print("Error code: {}".format(e.status))
